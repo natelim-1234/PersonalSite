@@ -1,3 +1,6 @@
+body {
+  margin: 0;
+}
 .App {
   background-image: url(./img/Nathan_Profile.jpg);
   text-align: center;
@@ -18,7 +21,7 @@
 .navbar-brand {
   font-size: 30px;
 
-  margin-right: 10px;
+  margin-right: 50px;
 }
 
 .App-header {
@@ -44,6 +47,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navbar-collapse.collapse {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+div.me-auto.navbar-nav {
+  margin-right: 0px;
 }
 
 .Home-bg {
