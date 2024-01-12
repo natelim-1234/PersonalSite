@@ -119,6 +119,12 @@ div.me-auto.navbar-nav {
   flex-wrap: nowrap;
 }
 
+.Lecture-tester {
+  height: 5000px;
+  width: 5000px;
+  background-color: red;
+}
+
 .Profile-container {
   display: flex;
   flex-direction: row;
