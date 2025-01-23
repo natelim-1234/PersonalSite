@@ -1,45 +1,18 @@
 import React from "react";
 import background from "../img/Nathan_Profile.jpg"
+import Portfolio from "./Portfolio.js"
+import DataManagementPortfolio from "./DataManagementPortfolio.js";
+import DataManagementIMG from "../img/Data_Management.svg";
+import Profile from "./Profile.js";
 
 function Home() {
     return(
-        <div className="Home-container">
-            <div className='Home-bg' alt='picture by Thom Milkovic'>
-            <div className='Profile-container'>
-            <div className='Introduction'>
-                <div className='Introduction-bg'></div>
-                <h1 className='Introduction-header'>Aspiring Data Scientist</h1>
-                <p className='Introduction-text'>I'm a recent graduate of UW looking for job opportunities
-                dfsfadsafdsafd sfafdsafdsafdsafdsafsa dfsdafsdafsdafdsafdsaf
-                afdsafdsafdsafsdafs dafsdafdsafdsafdsaf dsafdsafsad</p>
-            </div>
-            </div>
-            <header className="App-header">
-            {
-            <img className="Profile-pic" src={background}></img>
-            /* <p>Hello</p>
-            <p>
-                Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Learn React
-            </a> */}
-            </header>
-            </div>
-            <div className='Home-section-bg'>
-                <h1>text</h1>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
+        <div className="home-container">
+            <Profile/>
+            <div className='home-section-bg'>
+                <Portfolio imageSrc={DataManagementIMG}/>
+                {/* <CardSection/> */}
+
             </div>
         </div>
     );

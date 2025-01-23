@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-size: 16px;
 }
 .App {
   background-image: url(./img/Nathan_Profile.jpg);
@@ -25,12 +26,10 @@ body {
 }
 
 .App-header {
-  height :100%;
-  width: 70%;
-  min-height: 100vh;
+  flex-grow: calc(0.3 * 100);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -72,7 +71,7 @@ div.me-auto.navbar-nav {
   align-items: center;
 }
 
-.Home-section-bg {
+.home-section-bg {
   background-color: rgb(248, 241, 255);
 }
 
@@ -80,6 +79,8 @@ div.me-auto.navbar-nav {
   display: flex;
   padding-left: 10%;
   padding-right: 15%;
+  padding-top: 10%;
+  padding-bottom: 10%;
   height: 80%;
   width: 90%;
   background-color: rgb(223, 223, 223);
@@ -103,19 +104,21 @@ div.me-auto.navbar-nav {
 }
 */
 
-.Introduction-header {
+.introduction-header {
   display: flex;
-  margin-top: 5%;
   font-size: 50px;
   flex-wrap: nowrap;
-  border-bottom: dashed;
-  padding-bottom: 2%;
+  /* border-bottom: dashed; */
+  margin-bottom: 2%;
+  text-align: start;
 }
 
-.Introduction-text {
+.introduction-text {
   display: flex;
+  flex-direction: column;
+  text-align: start;
   text-wrap: wrap;
-  margin-bottom: 10%;
+  margin-bottom: 4%;
   flex-wrap: nowrap;
 }
 
@@ -125,20 +128,88 @@ div.me-auto.navbar-nav {
   background-color: red;
 }
 
-.Profile-container {
-  display: flex;
+/* .Profile-container {
+  display: inline-block;
   flex-direction: row;
   height :100%;
   width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-}
+  background-color: rgb(223, 223, 223);
+  background: hsl(188, 100%, 100%, 0.9);
+} */
 
-.Profile-pic {
-  width: 70%;
+.profile-pic {
+  width: 90%;
+  height: auto;
   border-radius: 5%;
   border: solid;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  padding: 3em;
+  border-radius: 0.5em;
+  background-color: rgb(223, 223, 223);
+  background: hsl(188, 100%, 100%, 0.95);
+}
+
+.introduction-container {
+  flex-grow: calc(0.7 * 100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.introduction-padding {
+  padding-top: 4em;
+  padding-bottom: 4em;
+  padding-left: 8em;
+  padding-right: 8em;
+}
+
+
+/*Larger screen*/
+@media screen and (min-width: 1920px) {
+  .introduction-padding {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 28em;
+    padding-right: 28em;
+  }
+  .introduction-text {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    text-wrap: wrap;
+    margin-bottom: 4%;
+    flex-wrap: nowrap;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  .introduction-header {
+    display: flex;
+    font-size: 4rem;
+    flex-wrap: nowrap;
+    /* border-bottom: dashed; */
+    margin-bottom: 2%;
+    text-align: start;
+  }
+  .introduction-container {
+    flex-grow: calc(0.7 * 100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
