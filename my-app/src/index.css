@@ -115,6 +115,7 @@ h3 {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
 }
 
 .portfolio-card:hover {
@@ -204,6 +205,10 @@ h3 {
 
 .gray-background {
   background-color: rgb(233, 233, 233);
+}
+
+.light-pink-background {
+  background-color: rgb(251, 233, 238);
 }
 
 .dark-gray-background {

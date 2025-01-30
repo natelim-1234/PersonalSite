@@ -8,6 +8,7 @@ import Wireframe from '../img/Wireframe.svg'
 import ComponentLibrary from '../img/Component_Library.svg'
 import HighFidelityMockup from '../img/High_Fidelity_Mockup.svg'
 import CodeGeneration from '../img/Code_Generation.svg'
+import Website from '../img/Website.svg'
 
 function MAQWebsitePortfolio(props) {
     const summaryDetails= [
@@ -17,25 +18,25 @@ function MAQWebsitePortfolio(props) {
     ]
     const headerName = "Website development; from mockup to launch"
 
-    const workBackText = 
-                    "By starting with the final deadline and working backwards, we identified all the key tasks and milestones that needed to be completed. " +
-                    "This method helped us prioritize tasks, allocate resources efficiently, and identify potential bottlenecks early. "
+    const sprintPlan = 
+                    "The sprint plan was compiled into an Impact Report which explained to the CEO the benefits of the website update and the estimated time required to complete the project. "
 
     const wireframeText = 
-                    "Wireframes were created to identify potential design issues early, streamline the user experience, and ensure alignment with project goals. " +
-                    "Additionally, the wireframe made it easier to communicate design ideas with the team and stakeholders."
+                    "After performing my research, I drew out wireframes to present to stakeholders how the information architecture of the webpage will be represented. " +
+                    "The wireframe made it easier to communicate design ideas and brainstorming before building out the high fidelity mockup."
 
     const figmaComponentLibraryText = 
-                    "We created a Figma component library to ensure that we maintain a consistent style between all pages for this project and for future projects our client may have. " +
+                    "I created a Figma component library to ensure that we maintain a consistent style between all pages for this project and for future projects our client may have. " +
                     "The Figma component library acted as a central source of truth, enabling collaboration and faster iterations while maintaining design consistency."
     
     const highFidelityMockupText = 
-                    "Our high fidelity mockup was used as a guideline for the code generation of the portal. " +
-                    "We ensured our mockup followed the company design system to provide a seamless transition for developers when translating the prototype into the actual product."
+                    "I first built out the mobile view to ensure that all of our features could fit in a smaller screen size. " +
+                    "Once the mobile view was complete, I began to plan out the desktop view. " +
+                    "After completing the mockup, I demoed my design and user flow to upper management and the CEO to finalize the design process."
     
     const reactTemplateCodeText = 
-                    "After the completion of our high fidelity mockup, our developers generated react code that closely followed our designs. " +
-                    "The code was then handed off to our client to be connected to their databases and backend features."
+                    "After the high fidelity mockup was approved by upper management and the CEO, I began development of the website. " +
+                    "The code and content for the website were meticulously checked for bugs and spelling errors before finally getting sign off."
     
     return(
         <div>
@@ -66,7 +67,7 @@ function MAQWebsitePortfolio(props) {
                                 <li>Wireframes</li>
                                 <li>Figma component library</li>
                                 <li>High fidelity mockup</li>
-                                <li>Completed website</li>
+                                <li><a href='https://maqsoftware.com/'>Completed website</a></li>
                             </ul>
 
                         </div>
@@ -152,10 +153,10 @@ function MAQWebsitePortfolio(props) {
                         <div className='grid-item'>
                             <h2 className='grid-header'>Order matters</h2>
                             <p>
-                                Throughout the design process, we held daily sprint meetings to ensure that our mockups and features were fully aligned with the requirements and needs of both our stakeholders and users.
+                                We used a third party app to identify which parts of the old website users clicked on the most and how long it took for them to view this information. We found that users were most interested in viewing our services and products, but were having to scroll further down the website to find this information which lead to users leaving the page out of frustration.
                             </p>
                             <p>
-                                As designers, it was essential for us to communicate design feasibility clearly with our stakeholders, explaining how certain features might need adjustments to ensure a more intuitive user experience.
+                                To improve the user experience, we moved all information for the company services and products to the top of the home page. Each service and product was ordered based on popularity so users could easily find what they are looking for.
                             </p>
                         </div>
                     </div>
@@ -164,10 +165,10 @@ function MAQWebsitePortfolio(props) {
             <div className="section-container-body gray-background left-align">
                 <div className='section portfolio-padding'>
                     <h2 className='section-header'>Deliverables</h2>
-                    <h2 className='section-sub-header'>(Details of deliverables cannot be provided due to a signed NDA.)</h2>
+                    <h2 className='section-sub-header'>(Some details are omitted due to a signed NDA.)</h2>
                     <div className='grid-container-2 card-row-space'>
                         <div className='grid-item grid-stretch'>
-                            <RowCard title={"Workback Plan"} imageUrl={WorkbackPlan} description={workBackText}></RowCard>
+                            <RowCard title={"Sprint plan"} imageUrl={WorkbackPlan} description={sprintPlan}></RowCard>
                         </div>
                         <div className='grid-item'>
                             <RowCard title={"Wireframes"} imageUrl={Wireframe} description={wireframeText}></RowCard>
@@ -183,7 +184,7 @@ function MAQWebsitePortfolio(props) {
                     </div>
                     <div className='grid-container-2 card-row-space'>
                         <div className='grid-item'>
-                            <RowCard title={"React template code"} imageUrl={CodeGeneration} description={reactTemplateCodeText}></RowCard>
+                            <RowCard title={"Completed website"} imageUrl={Website} description={reactTemplateCodeText}></RowCard>
                         </div>
                         <div className='grid-item'>
                         </div>
