@@ -12,11 +12,11 @@ import Website from '../img/Website.svg'
 
 function MAQWebsitePortfolio(props) {
     const summaryDetails= [
-        "One of my first few projects at MAQ Software was to work closely with the CEO and project leads to revamp the company website before the 2024 Microsoft Ignite conference."
+        ""
         , "My goal was to make it easier for customers to better understand what services our company provides and how they can benefit from working with us." +
         " This would be accomplished by performing a competitive analysis, analyzing the current information structure, and creating a new modern look to showcase our company services and other related information."
     ]
-    const headerName = "Website development; from mockup to launch"
+    const headerName = "Designing impactful company collaterals"
 
     const sprintPlan = 
                     "The sprint plan was compiled into an Impact Report which explained to the CEO the benefits of the website update and the estimated time required to complete the project. "
