@@ -1,21 +1,29 @@
 import React from 'react';
+import { Worker, Viewer } from '@react-pdf-viewer/core';
+import '@react-pdf-viewer/core/lib/styles/index.css';
+import { pdfjs } from 'react-pdf';
 import {useParams} from 'react-router-dom';
 import CaseStudyHeader from './CaseStudyHeader';
 import RowCard from './RowCard';
-import DataManagementIMG from '../img/Data_Management.svg'
-import WorkbackPlan from '../img/Workback_Plan.svg'
-import Wireframe from '../img/Wireframe.svg'
-import ComponentLibrary from '../img/Component_Library.svg'
-import HighFidelityMockup from '../img/High_Fidelity_Mockup.svg'
-import CodeGeneration from '../img/Code_Generation.svg'
-import Website from '../img/Website.svg'
+import DataManagementIMG from '../img/Data_Management.svg';
+import WorkbackPlan from '../img/Workback_Plan.svg';
+import Wireframe from '../img/Wireframe.svg';
+import ComponentLibrary from '../img/Component_Library.svg';
+import HighFidelityMockup from '../img/High_Fidelity_Mockup.svg';
+import CodeGeneration from '../img/Code_Generation.svg';
+import Website from '../img/Website.svg';
+import companyBrochure1 from '../img/MSIgnite24_Brochure-1.png'
+import companyBrochure2 from '../img/MSIgnite24_Brochure-2.png'
 
-function MAQWebsitePortfolio(props) {
+function MAQCollateralsPortfolio(props) {
     const summaryDetails= [
-        ""
-        , "My goal was to make it easier for customers to better understand what services our company provides and how they can benefit from working with us." +
-        " This would be accomplished by performing a competitive analysis, analyzing the current information structure, and creating a new modern look to showcase our company services and other related information."
+        "Microsoft Ignite 2024 is an annual conference where various companies gather to see the latest innovations in Microsoft technology and to present their own services."
+        , "I was tasked with designing collaterals for our company booth such as handouts, informational webpages, video demoes, and booth backdrops that would attract new customers. " +
+        "Each item was thoughtfully designed to showcase our company in the most engaging and efficient way possible, ensuring the information is presented with both clarity and impact."
     ]
+
+    const companyBrochure = '../img/MSIgnite24_Brochure.pdf'
+    
     const headerName = "Designing impactful company collaterals"
 
     const sprintPlan = 
@@ -50,31 +58,27 @@ function MAQWebsitePortfolio(props) {
                         <div className='grid-item'>
                             <h2 className='grid-header'>Services</h2>
                             <ul>
-                                <li>Hold stakeholder interviews</li>
-                                <li>Create sprint plan</li>
-                                <li>Perform competitive analysis</li>
-                                <li>Figma component library creation</li>
+                                <li>Requirements gathering</li>
+                                <li>Competitive analysis</li>
                                 <li>Figma mockup creation</li>
-                                <li>Lead ideation meetings</li>
-                                <li>Web development</li>
+                                <li>Visual design</li>
+                                <li>Video editing</li>
                             </ul>
 
                         </div>
                         <div className='grid-item'>
                             <h2 className='grid-header'>Deliverables</h2>
                             <ul>
-                                <li>Sprint plan</li>
-                                <li>Wireframes</li>
-                                <li>Figma component library</li>
-                                <li>High fidelity mockup</li>
-                                <li><a href='https://maqsoftware.com/'>Completed website</a></li>
+                                <li>Company brochure</li>
+                                <li>Event information webpage</li>
+                                <li>Video demoes</li>
+                                <li>Booth backdrop</li>
                             </ul>
 
                         </div>
                         <div className='grid-item'>
                             <h2 className='grid-header'>Outcomes</h2>
-                            <p>The website redesign focused on improving readability and clarity to ensure visitors easily understand the company's services and mission.</p>
-                            <p>By optimizing the layout, simplifying navigation, and enhancing content presentation, the updated site effectively communicates the company’s offerings, making it more user-friendly and accessible to potential clients.</p>
+                            <p>The company collaterals created for the Microsoft Ignite 2024 were designed to captivate and engage through striking visuals and interesting topics for sparking meaningful conversations with customers.</p>
                         </div>
                     </div>
 
@@ -82,57 +86,8 @@ function MAQWebsitePortfolio(props) {
             </div>
             <div className="section-container-body gray-background left-align">
                 <div className='section portfolio-padding'>
-                    <h2 className='section-header'>Understanding the problem</h2>
-
-                    <div className='grid-container-1'>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Problem statement</h2>
-                            <p>
-                            The company's website currently struggles to effectively communicate its services and mission, leading to confusion and a lack of clarity for visitors.
-                             The layout, content organization, and navigation make it difficult for users to quickly understand the value the company provides, hindering engagement and potentially impacting business opportunities.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className='grid-container-2'>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>My task</h2>
-                            <p>
-                                Conduct meetings with the CEO and project leads to interpret their ideas and requests into actionable sprint items.
-                                 Create iteratable mockups to finalize all design decisions before conducting the website development phase.
-                                
-                            </p>
-                        </div>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Defining goals</h2>
-                            <ol>
-                                <li>Create sprint plan</li>
-                                <li>Define information architecture of home page</li>
-                                <li>Design new page components for Figma library</li>
-                                <li>Receive signoff for mockup from CEO and project leads</li>
-                                <li>Develop new webpage</li>
-                                <li>Ensure new website is bug free</li>
-                                <li>Publish website before Microsoft Ignite 2024 event</li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div className='grid-container-2'>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Meeting the deadline</h2>
-                            <p>
-                                To complete this project in a timely manner before our company attends the 2024 Microsoft Ignite conference, I held daily meetings with the CEO and project leads to better understand the vision and message of the new website.
-                                I then interpreted these requests into actionable sprint items and created a plan to complete website development before the provided deadline.
-                            </p>
-                        </div>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Research</h2>
-                            <p>
-                                I first deconstructed the website's information architecture to better understand the pitfalls of our current design.
-                                 From here, I began a competitive analysis of other consulting company websites to see how information for services could be presented in a more understandable manner.
-                                 I then combined our own original ideas with designs from our competitive analysis to create a website mockup that fit our requirements.
-                            </p>
-                        </div>
-                    </div>
+                    <h2 className='section-header'>Company brochure</h2>
+                    <object data="MSIgnite24_Brochure.pdf" height="1000"></object>
                 </div>
             </div>
             <div className="section-container-body white-background left-align">
@@ -196,4 +151,4 @@ function MAQWebsitePortfolio(props) {
     );
 }
 
-export default MAQWebsitePortfolio;
+export default MAQCollateralsPortfolio;
