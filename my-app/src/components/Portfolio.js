@@ -13,6 +13,13 @@ Link Attribution:
 const Portfolio = () => {
     const sections = [
       {
+        title: 'Designing a convention event recommender',
+        imageUrl: DataManagementImg,
+        blurb: 'Designed a desktop and mobile app that helps users plan their schedules for conventions.',
+        linkText: 'Read more',
+        linkUrl: '/event-recommender'
+      },
+      {
         title: 'Revamping a data management service',
         imageUrl: DataManagementImg,
         blurb: 'Worked closely with data modelers and data scientists to lead the redesign of their data management interface. Simplified design to reduce clicks by 30%.',

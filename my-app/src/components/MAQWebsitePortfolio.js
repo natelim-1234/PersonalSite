@@ -67,7 +67,7 @@ function MAQWebsitePortfolio(props) {
                                 <li>Wireframes</li>
                                 <li>Figma component library</li>
                                 <li>High fidelity mockup</li>
-                                <li><a href='https://maqsoftware.com/'>Completed website</a></li>
+                                <li><a href='https://maqsoftware.com/' rel="noopener noreferrer" target='_blank'>Completed website</a></li>
                             </ul>
 
                         </div>

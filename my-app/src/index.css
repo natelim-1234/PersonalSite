@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
 }
 
 code {
@@ -12,8 +13,16 @@ code {
     monospace;
 }
 
+p {
+  font-size: 20px;
+}
+
+li {
+  font-size: 20px;
+}
+
 .section-header{ 
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 0.5em;
 }
@@ -22,6 +31,10 @@ code {
   font-size: 1.5em;
   margin-bottom: 0.5em;
   font-weight: bold;
+}
+
+.header-sub-text {
+  font-size: 1.25em;
 }
 
 .section-grow {
@@ -33,6 +46,17 @@ code {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+
+.centered {
+  align-items: center;
+  text-align: center;
+}
+
+.full-image {
+  width: 100%;
+  height: auto;
 }
 
 /*Card section style*/
@@ -223,8 +247,8 @@ h3 {
 }
 
 .portfolio-padding {
-  padding-right: 10vw;
-  padding-left: 10vw;
+  padding-right: 16vw;
+  padding-left: 16vw;
 }
 
 .disclaimer {

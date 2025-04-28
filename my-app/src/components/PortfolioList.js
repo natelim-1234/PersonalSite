@@ -1,6 +1,7 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import EventRecommender from './EventRecommender.js';
 import DataManagementImg from '../img/Data_Management.svg';
 import MAQWebsiteImg from "../img/MAQ_Website.png";
 import MAQIgniteBooth from "../img/MAQ_Ignite_Booth.png";
@@ -12,6 +13,13 @@ Link Attribution:
 
 const Portfolio = () => {
     const sections = [
+      {
+        title: 'Designing a convention event recommender',
+        imageUrl: DataManagementImg,
+        blurb: 'Worked closely with data modelers and data scientists to lead the redesign of their data management interface. Simplified design to reduce clicks by 30%.',
+        linkText: 'Read more',
+        linkUrl: '/event-recommender'
+      },
       {
         title: 'Revamping a data management service',
         imageUrl: DataManagementImg,

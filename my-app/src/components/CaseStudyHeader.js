@@ -7,7 +7,7 @@ const CaseStudyHeader = ({HeaderName, SummaryArray}) => {
                 <h2 className='section-header'>{HeaderName}</h2>
                 <div className='portfolio-padding'>
                     {SummaryArray.map((text, index) => (
-                        <p>{text}</p>
+                        <p className="header-sub-text">{text}</p>
                     ))}
                     <p className='disclaimer'>
                         To comply with my non-disclosure agreement, I have omitted confidential information such as the name of the client and sensitive project details.

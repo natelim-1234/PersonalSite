@@ -5,6 +5,7 @@ import background from "../img/Nathan_Profile.jpg"
 import Lecture from './Lecture.js';
 import Home from './Home.js';
 import Footer from './Footer.js';
+import EventRecommender from './EventRecommender.js';
 import DataServePortfolio from './DataManagementPortfolio.js';
 import MAQWebsitePortfolio from './MAQWebsitePortfolio.js';
 import MAQCollateralsPortfolio from './MAQCollateralsPortfolio.js';
@@ -29,6 +30,7 @@ function App() {
           <Route path="portfolio" element={<PortfolioList/>}/>
 
           <Route path="home" element={<Home/>}/>
+          <Route path="/event-recommender" element={<EventRecommender/>}/>
           <Route path="/data-serve-portfolio" element={<DataServePortfolio/>}/>
           <Route path="/MAQ-website-portfolio" element={<MAQWebsitePortfolio/>}/>
           <Route path="/MAQ-collaterals-portfolio" element={<MAQCollateralsPortfolio/>}/>
