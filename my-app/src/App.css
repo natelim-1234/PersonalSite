@@ -49,9 +49,7 @@ body {
 }
 
 .navbar-collapse.collapse {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+
 }
 
 div.me-auto.navbar-nav {

@@ -5,6 +5,7 @@ import EventRecommender from './EventRecommender.js';
 import DataManagementImg from '../img/Data_Management.svg';
 import MAQWebsiteImg from "../img/MAQ_Website.png";
 import MAQIgniteBooth from "../img/MAQ_Ignite_Booth.png";
+import RecommenderLanding from '../img/session-recommender-images/session-recommender-landing.svg'
 
 /*
 Link Attribution:
@@ -14,18 +15,11 @@ Link Attribution:
 const Portfolio = () => {
     const sections = [
       {
-        title: 'Designing a convention event recommender',
-        imageUrl: DataManagementImg,
+        title: 'Designing a convention schedule recommender',
+        imageUrl: RecommenderLanding,
         blurb: 'Worked closely with data modelers and data scientists to lead the redesign of their data management interface. Simplified design to reduce clicks by 30%.',
         linkText: 'Read more',
         linkUrl: '/event-recommender'
-      },
-      {
-        title: 'Revamping a data management service',
-        imageUrl: DataManagementImg,
-        blurb: 'Worked closely with data modelers and data scientists to lead the redesign of their data management interface. Simplified design to reduce clicks by 30%.',
-        linkText: 'Read more',
-        linkUrl: '/data-serve-portfolio'
       },
       {
         title: 'Website development; from mockup to launch',
@@ -40,12 +34,19 @@ const Portfolio = () => {
         blurb: 'Utilized creativity and an understanding of the company mission and goals to produce high quality designs for booth art, video presentations, and brochures for the Microsoft Ignite conference.',
         linkText: 'Read more',
         linkUrl: '/MAQ-collaterals-portfolio'
+      },
+      {
+        title: 'Revamping a data management service',
+        imageUrl: DataManagementImg,
+        blurb: 'Worked closely with data modelers and data scientists to lead the redesign of their data management interface. Simplified design to reduce clicks by 30%.',
+        linkText: 'Read more',
+        linkUrl: '/data-serve-portfolio'
       }
     ];
   
     return (
 
-        <div className="section-container light-pink-background">
+        <div className="section-container gray-background">
             <div className="section-header">
                 Portfolio List
             </div>

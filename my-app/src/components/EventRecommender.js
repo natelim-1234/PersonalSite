@@ -8,8 +8,17 @@ import Wireframe from '../img/Wireframe.svg'
 import ComponentLibrary from '../img/Component_Library.svg'
 import HighFidelityMockup from '../img/High_Fidelity_Mockup.svg'
 import CodeGeneration from '../img/Code_Generation.svg'
-import EventRecommenderCase1 from '../img/Event-Recommender-Case-1.PNG'
-import EventRecommenderCase2 from '../img/Event-Recommender-Case-2.PNG'
+import EventRecommenderCase1 from '../img/session-recommender-images/Event-Recommender-Case-1.PNG'
+import EventRecommenderCase2 from '../img/session-recommender-images/Event-Recommender-Case-2.PNG'
+import WhovaFlowHorizontal from '../img/session-recommender-images/whova-flow-horizontal.png'
+import WhovaFlowHorizontalpdf from '../img/whova-flow-horizontal.pdf'
+import HorizontalScrollImage from './HorizontalScrollImage';
+import AIEventRecommenderHorizontal from '../img/session-recommender-images/ai-event-recommender-flow-horizontal.png'
+import RecommenderLanding from '../img/session-recommender-images/session-recommender-landing.svg'
+import QuestionAndAnswer from '../img/session-recommender-images/question-and-answer.svg'
+import Calendar from '../img/session-recommender-images/Calendar.svg'
+import ReplaceSession from '../img/session-recommender-images/replace-session.svg'
+import EmailSchedule from '../img/session-recommender-images/email-schedule.svg'
 
 function EventRecommender(props) {
     const summaryDetails= [
@@ -18,29 +27,31 @@ function EventRecommender(props) {
     ]
     const headerName = "Designing a convention schedule recommender"
 
-    const workBackText = 
-                    "By starting with the final deadline and working backwards, we identified all the key tasks and milestones that needed to be completed. " +
-                    "This method helped us prioritize tasks, allocate resources efficiently, and identify potential bottlenecks early. "
+    const feature1 = 
+                    "The Q&A input format reflects natural behavior. " +
+                    "Instead of overwhelming users with filters or forms, they simply engage in conversation with the input just like they would in a forum or with a colleague. "+
+                    "This intuitive approach allows users to easily jump into using the application without a steep learning curve."
+                    
 
-    const wireframeText = 
-                    "Wireframes were created to identify potential design issues early, streamline the user experience, and ensure alignment with project goals. " +
-                    "Additionally, the wireframe made it easier to communicate design ideas with the team and stakeholders."
+    const feature2 = 
+                    "Following the principle of \"Recognition Over Recall\", the decision was made to use a calendar view similar to \"Apple Calendar\" or \"Teams Calendar\" to represent the schedules UI. " +
+                    "By presenting the schedule in a format users are accustomed to, we make it easier for them to quickly understand session timings, navigate between days, and replace sessions."
 
-    const figmaComponentLibraryText = 
-                    "We created a Figma component library to ensure that we maintain a consistent style between all pages for this project and for future projects our client may have. " +
-                    "The Figma component library acted as a central source of truth, enabling collaboration and faster iterations while maintaining design consistency."
+    const feature3 = 
+                    "Users have the ability to replace sessions that are selected by the AI. " +
+                    "The sessions list is ordered by relevance to the user's preferences, with the most relevant at the top and the least relevant at the bottom, to avoid an increased scroll. " +
+                    "Users can also read more about each session."
     
-    const highFidelityMockupText = 
-                    "Our high fidelity mockup was used as a guideline for the code generation of the portal. " +
-                    "We ensured our mockup followed the company design system to provide a seamless transition for developers when translating the prototype into the actual product."
-    
-    const reactTemplateCodeText = 
-                    "After the completion of our high fidelity mockup, our developers generated react code that closely followed our designs. " +
-                    "The code was then handed off to our client to be connected to their databases and backend features."
+    const feature4 = 
+                    "After users are satisfied with their schedules, they have the ability to send the schedule as a pdf to their emails for offline access."
     
     return(
         <div>
             <CaseStudyHeader HeaderName={headerName} SummaryArray={summaryDetails}></CaseStudyHeader>
+            
+            <div className='section-container-body gray-background center-align'>
+                <img class="header-image" src= {RecommenderLanding}></img>
+            </div>
 
             <div className="section-container-body white-background left-align">
                 <div className='section portfolio-padding'>
@@ -79,6 +90,7 @@ function EventRecommender(props) {
 
                 </div>
             </div>
+
             <div className="section-container-body gray-background left-align">
                 <div className='section portfolio-padding'>
                     <h2 className='section-header'>Fabcon Vegas 2025</h2>
@@ -107,8 +119,8 @@ function EventRecommender(props) {
                                 With hundreds of sessions, workshops, and panels scheduled across multiple days and tracks, many users, especially first-time attendees, struggled to identify sessions relevant to their interests and professional goals.
                             </p> */}
                             <p>
-                                While existing applications like Whova offer robust tools for event scheduling and networking, 
-                                they often require users to create accounts and navigate generalized platforms that serve a wide range of events. 
+                                While existing applications like Whova offer robust tools for event scheduling and networking, their generalized design introduces many distractions, making it difficult for users to quickly tailor their experience to specific events. 
+                                Additionally, Whova lacks AI-driven recommendation tools that could assist users in effortlessly creating an optimized, personalized schedule. 
                                 We saw an opportunity to utilize our AI expertise to deliver a more focused and streamlined experience specifically for Fabcon Vegas 2025.
                             </p>
 
@@ -178,7 +190,7 @@ function EventRecommender(props) {
                     </div>
                     <div className='grid-container-1'>
                         <div className='grid-item'>
-                            <h2 className='grid-header'>Competiter analysis</h2>
+                            <h2 className='grid-header'>Are there other tools in the market?</h2>
                             <p>
                                 While similar platforms like Whova had many sophisticated scheduling features for a multitude of events, they required a somewhat lengthy process for new users to download an app, create an account, and sift through generalized interfaces designed to support many events at once.
                             </p>
@@ -220,7 +232,7 @@ function EventRecommender(props) {
                             </p>
                             <ol>
                                 <li>
-                                    <b>Minimal cognitive load</b> - A cleaner interface with prioritized content will help to reduce confusion and allow users to make quick and informed decisions in the moment.
+                                    <b>Minimize cognitive load</b> - A cleaner interface with prioritized content will help to reduce confusion and allow users to make quick and informed decisions in the moment.
                                 </li>
                                 <li>
                                     <b>Instant access</b> - Users wanted to explore sessions without having to create an account, download an app, or go through a login flow.
@@ -241,52 +253,67 @@ function EventRecommender(props) {
                 <div className='section portfolio-padding'>
                     <h2 className='section-header'>Design strategy & approach</h2>
                     <div className='grid-container-1'>
-                        <div className='grid-item'>
-                            <div className='grid-container-1'>
-                                <div className='grid-item'>
-                                    <h2 className='grid-header'>Analyzing the competitor flow</h2>
-                                    <iframe width="800" height="450" src="https://embed.figma.com/board/z9qNF0lGLFUcN6E11EobyC/Whova-Flow?node-id=0-1&embed-host=share" allowfullscreen></iframe>
-                                    <p> 
-                                        To better understand the needs of Fabcon 2025 attendees, we began by reviewing feedback from past and current Microsoft Fabric events, including social media comments, community forums, and conversations on LinkedIn. 
-                                    </p>
-                                    <p>
-                                        A recurring theme quickly emerged: while attendees were excited about the conference content, some required guidance trying to navigate the sheer volume of sessions and workshops.
-                                    </p>
-                                </div>
+                        <h2 className='grid-header'>Analyzing the competitor flow</h2>
+                        <p> 
+                            We began by mapping out Whova's complete user flow, from onboarding and event discovery to session selection. 
+                            This process revealed that while Whova offers a broad set of features, its generalized design often introduces cognitive friction for users whose primary goal is simply to build an effective event schedule.
+                            At most, there were six user decisions and a lengthy repetitive process of selecting and viewing sessions individually in order for users to complete their schedule creation.
+                        </p>
+                        {/* <iframe width="800" height="450" src="https://embed.figma.com/board/z9qNF0lGLFUcN6E11EobyC/Whova-Flow?node-id=0-1&embed-host=share" allowfullscreen></iframe> */}
+
+                        <HorizontalScrollImage image={WhovaFlowHorizontal}></HorizontalScrollImage>
+                        <h2 className='grid-header'>Simplifying the user flow</h2>
+                        <p> 
+                            By starting with a competitor's complex flow and stripping it down to its essentials, we laid the foundation for a scheduling experience that is both intuitive and tailored to users. 
+                            We removed most of the cognitive friction by using our trained AI to create a schedule that pertains to our user's interest. 
+                            When a user is not satisfied with their schedule, they can use our AI recommendation feature to produce a list of sessions that are ordered by relevance to their interests to easily find what they are looking for.
+                            These functions greatly reduces the amount of reading and cognitive load the user must perform in order to assemble their schedule.
+                        </p>
+                        <HorizontalScrollImage image={AIEventRecommenderHorizontal}></HorizontalScrollImage>
+                    </div>
+                </div>
+            </div>
+
+            <div className="section-container-body gray-background left-align">
+                <div className='section portfolio-padding'>
+                    <h2 className='section-header'>Core Features & Design Solutions</h2>
+                    <div className='grid-container-1'>
+                        <h2 className='grid-header'>Simplifying processes by leveraging AI</h2>
+                        <div className='grid-container-2 card-row-space'>
+                            <div className='grid-item grid-stretch'>
+                                <RowCard title={"Intuitive Q&A Format"} imageUrl={QuestionAndAnswer} description={feature1}></RowCard>
+                            </div>
+                            <div className='grid-item'>
+                                <RowCard title={"Calendar View"} imageUrl={Calendar} description={feature2}></RowCard>
+                            </div>
+                        </div>
+                        <div className='grid-container-2 card-row-space'>
+                            <div className='grid-item'>
+                                <RowCard title={"Recommended List"} imageUrl={ReplaceSession} description={feature3}></RowCard>
+                            </div>
+                            <div className='grid-item grid-stretch'>
+                                <RowCard title={"Send Schedule to Email"} imageUrl={EmailSchedule} description={feature4}></RowCard>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="section-container-body gray-background left-align">
+
+            <div className="section-container-body white-background left-align">
                 <div className='section portfolio-padding'>
-                    <h2 className='section-header'>Deliverables</h2>
-                    <h2 className='section-sub-header'>(Details of deliverables cannot be provided due to a signed NDA.)</h2>
-                    <div className='grid-container-2 card-row-space'>
-                        <div className='grid-item grid-stretch'>
-                            <RowCard title={"Workback Plan"} imageUrl={WorkbackPlan} description={workBackText}></RowCard>
-                        </div>
-                        <div className='grid-item'>
-                            <RowCard title={"Wireframes"} imageUrl={Wireframe} description={wireframeText}></RowCard>
-                        </div>
-                    </div>
-                    <div className='grid-container-2 card-row-space'>
-                        <div className='grid-item'>
-                            <RowCard title={"Figma component library"} imageUrl={ComponentLibrary} description={figmaComponentLibraryText}></RowCard>
-                        </div>
-                        <div className='grid-item grid-stretch'>
-                            <RowCard title={"High fidelity mockup"} imageUrl={HighFidelityMockup} description={highFidelityMockupText}></RowCard>
-                        </div>
-                    </div>
-                    <div className='grid-container-2 card-row-space'>
-                        <div className='grid-item'>
-                            <RowCard title={"React template code"} imageUrl={CodeGeneration} description={reactTemplateCodeText}></RowCard>
-                        </div>
-                        <div className='grid-item'>
-                        </div>
+                    <h2 className='section-header'>Design Reflections</h2>
+                    <div className='grid-container-1'>
+                        <h2 className='grid-header'>The project release</h2>
+                        <p> 
+                            Our passion project, the schedule recommender application, released successfully on our company LinkedIn page.
+                            Due to the time restraints of the project, there was not enough time to implement everything that we aimed to acheive.
+                            If we had more time, we would have liked to implement a more conversational chat experience so that users could probe the AI for further insights.
+                        </p>
+
                     </div>
                 </div>
             </div>
+            
         
         </div>
 

@@ -18,8 +18,8 @@ import companyBrochure2 from '../img/MSIgnite24_Brochure-2.png'
 function MAQCollateralsPortfolio(props) {
     const summaryDetails= [
         "Microsoft Ignite 2024 is an annual conference where various companies gather to see the latest innovations in Microsoft technology and to present their own services."
-        , "I was tasked with designing collaterals for our company booth such as handouts, informational webpages, video demoes, and booth backdrops that would attract new customers. " +
-        "Each item was thoughtfully designed to showcase our company in the most engaging and efficient way possible, ensuring the information is presented with both clarity and impact."
+        , "I was tasked with designing collaterals for our company booth such as handouts, informational webpages, video demoes, and booth backdrops that would attract new customers. "
+        // "Each item was thoughtfully designed to showcase our company in the most engaging and efficient way possible, ensuring the information is presented with both clarity and impact."
     ]
 
     const companyBrochure = '../img/MSIgnite24_Brochure.pdf'
@@ -90,62 +90,7 @@ function MAQCollateralsPortfolio(props) {
                     <object data="MSIgnite24_Brochure.pdf" height="1000"></object>
                 </div>
             </div>
-            <div className="section-container-body white-background left-align">
-                <div className='section portfolio-padding'>
-                    <h2 className='section-header'>The solution</h2>
-                    <div className='grid-container-2'>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Unifying our design</h2>
-                            <p> 
-                                The past website lacked design cohesion which made it difficult for users to intuitively read or navigate from page to page.
-                                In order to solve this problem, we redesigned the whole website using the Microsoft Fluent UI design system as a reference point while making our own tweaks along the way to make our own style.
-                            </p>
-
-                            <p>           
-                                By unifying our style, users were able to easily navigate the website which lead to an overall 40% increase in activity on our services and product pages.
-                            </p>
-                        </div>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Order matters</h2>
-                            <p>
-                                We used a third party app to identify which parts of the old website users clicked on the most and how long it took for them to view this information. We found that users were most interested in viewing our services and products, but were having to scroll further down the website to find this information which lead to users leaving the page out of frustration.
-                            </p>
-                            <p>
-                                To improve the user experience, we moved all information for the company services and products to the top of the home page. Each service and product was ordered based on popularity so users could easily find what they are looking for.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="section-container-body gray-background left-align">
-                <div className='section portfolio-padding'>
-                    <h2 className='section-header'>Deliverables</h2>
-                    <h2 className='section-sub-header'>(Some details are omitted due to a signed NDA.)</h2>
-                    <div className='grid-container-2 card-row-space'>
-                        <div className='grid-item grid-stretch'>
-                            <RowCard title={"Sprint plan"} imageUrl={WorkbackPlan} description={sprintPlan}></RowCard>
-                        </div>
-                        <div className='grid-item'>
-                            <RowCard title={"Wireframes"} imageUrl={Wireframe} description={wireframeText}></RowCard>
-                        </div>
-                    </div>
-                    <div className='grid-container-2 card-row-space'>
-                        <div className='grid-item'>
-                            <RowCard title={"Figma component library"} imageUrl={ComponentLibrary} description={figmaComponentLibraryText}></RowCard>
-                        </div>
-                        <div className='grid-item grid-stretch'>
-                            <RowCard title={"High fidelity mockup"} imageUrl={HighFidelityMockup} description={highFidelityMockupText}></RowCard>
-                        </div>
-                    </div>
-                    <div className='grid-container-2 card-row-space'>
-                        <div className='grid-item'>
-                            <RowCard title={"Completed website"} imageUrl={Website} description={reactTemplateCodeText}></RowCard>
-                        </div>
-                        <div className='grid-item'>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         
         </div>
     );

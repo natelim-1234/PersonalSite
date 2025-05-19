@@ -59,6 +59,33 @@ li {
   height: auto;
 }
 
+.header-image {
+  height: 600px;
+  width: auto;
+}
+
+
+
+.scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+  user-select: none;
+  cursor: grab;
+}
+
+/* .scroll-container {
+  display: inline-block;
+} */
+
+.flow-image {
+  max-width: none;
+  height: 700px;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
 /*Card section style*/
 .card-section {
   display: flex;
@@ -296,6 +323,10 @@ align-items: stretch;
 .nav-link {
   margin-left: 1em;
   margin-right: 1em;
+}
+
+.navbar-collapse.collapse {
+  align-items: center;
 }
 
 /* Row Card.css */
