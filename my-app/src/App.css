@@ -4,7 +4,6 @@ body {
 }
 .App {
   background-image: url(./img/Nathan_Profile.jpg);
-  text-align: center;
   background: rgb(164, 162, 162);
 }
 
@@ -167,8 +166,8 @@ div.me-auto.navbar-nav {
 .introduction-padding {
   padding-top: 4em;
   padding-bottom: 4em;
-  padding-left: 8em;
-  padding-right: 8em;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 
@@ -180,8 +179,8 @@ div.me-auto.navbar-nav {
     gap: 20px;
     padding-top: 4em;
     padding-bottom: 4em;
-    padding-left: 28em;
-    padding-right: 28em;
+    padding-left: 15%;
+    padding-right: 15%;
   }
   .introduction-text {
     display: flex;

@@ -6,7 +6,6 @@ import DataManagementImg from '../img/Data_Management.svg';
 import MAQWebsiteImg from "../img/MAQ_Website.png";
 import MAQIgniteBooth from "../img/MAQ_Ignite_Booth.png";
 import RecommenderLanding from '../img/session-recommender-images/session-recommender-landing.svg'
-
 /*
 Link Attribution:
 <a href="https://storyset.com/business">Business illustrations by Storyset</a>
@@ -46,8 +45,8 @@ const Portfolio = () => {
   
     return (
 
-        <div className="section-container gray-background">
-            <div className="section-header">
+        <div className="section-container light-blue-background">
+            <div className="section-header centered">
                 Portfolio List
             </div>
             {sections.map((card, index) => (

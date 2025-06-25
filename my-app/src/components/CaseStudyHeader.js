@@ -4,8 +4,8 @@ const CaseStudyHeader = ({HeaderName, SummaryArray}) => {
     return (
         <div className="section-container-body dark-gray-background">
             <div className='section'>
-                <h2 className='section-header'>{HeaderName}</h2>
-                <div className='portfolio-padding'>
+                <h2 className='section-header centered header-padding'>{HeaderName}</h2>
+                <div className='portfolio-padding centered'>
                     {SummaryArray.map((text, index) => (
                         <p className="header-sub-text">{text}</p>
                     ))}

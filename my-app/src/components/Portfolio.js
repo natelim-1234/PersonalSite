@@ -46,7 +46,7 @@ const Portfolio = () => {
     return (
 
         <div className="section-container">
-            <div className="section-header">
+            <div className="section-header centered">
                 Project showcase
             </div>
             {sections.map((card, index) => (
