@@ -483,9 +483,34 @@ align-items: stretch;
 /* Small devices (portrait tablets and large phones, 576px to 767.98px) */
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   /* CSS rules for small tablets */
+  .row-card {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .grid-container-2 {
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: 1fr;
+    gap: 4em;
+  }
 }
 
 /* Extra small devices (phones, less than 576px) */
 @media only screen and (max-width: 575.98px) {
   /* CSS rules for phones */
+  .grid-container-2 {
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: 1fr;
+    gap: 4em;
+  }
+
+  .grid-container-3 {
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: 1fr;
+    gap: 4em;
+  }
 }
