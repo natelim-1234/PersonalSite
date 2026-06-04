@@ -109,6 +109,8 @@ function DataManagementPortfolio(props) {
                             </ol>
                         </div>
                     </div>
+
+
                     <div className='grid-container-2'>
                     <div className='grid-item'>
                             <h2 className='grid-header'>Seeing the bigger picture</h2>
@@ -125,6 +127,7 @@ function DataManagementPortfolio(props) {
                     </div>
                 </div>
             </div>
+
             <div className="section-container-body white-background left-align">
                 <div className='section portfolio-padding'>
                     <h2 className='section-header'>The solution</h2>
