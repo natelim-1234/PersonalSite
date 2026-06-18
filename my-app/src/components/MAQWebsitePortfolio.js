@@ -1,199 +1,147 @@
 import React from 'react';
-import {useParams} from 'react-router-dom';
-import CaseStudyHeader from './CaseStudyHeader';
-import RowCard from './RowCard';
-import DataManagementIMG from '../img/Data_Management.svg'
-import WorkbackPlan from '../img/Workback_Plan.svg'
-import Wireframe from '../img/Wireframe.svg'
-import ComponentLibrary from '../img/Component_Library.svg'
-import HighFidelityMockup from '../img/High_Fidelity_Mockup.svg'
-import CodeGeneration from '../img/Code_Generation.svg'
-import Website from '../img/Website.svg'
+import { ReadBar, CaseHero, CaseCover, CaseBlock, CaseResults } from './CaseStudyLayout';
 
-function MAQWebsitePortfolio(props) {
-    const summaryDetails= [
-        "One of my first few projects at MAQ Software was to work closely with the CEO and project leads to revamp the company website before the 2024 Microsoft Ignite conference."
-        , "My goal was to make it easier for customers to better understand what services our company provides and how they can benefit from working with us." +
-        " This would be accomplished by performing a competitive analysis, analyzing the current information structure, and creating a new modern look to showcase our company services and other related information."
-    ]
-    const headerName = "Website development; from mockup to launch"
+const SPEC = [
+  { k: 'Role',     v: 'Designer & Developer' },
+  { k: 'Timeline', v: '6 Weeks' },
+  { k: 'Team',     v: 'Solo (CEO oversight)' },
+  { k: 'Platform', v: 'Web' },
+];
 
-    const sprintPlan = 
-                    "The sprint plan was compiled into an Impact Report which explained to the CEO the benefits of the website update and the estimated time required to complete the project. "
+function MAQWebsitePortfolio() {
+  return (
+    <div>
+      <ReadBar />
 
-    const wireframeText = 
-                    "After performing my research, I drew out wireframes to present to stakeholders how the information architecture of the webpage will be represented. " +
-                    "The wireframe made it easier to communicate design ideas and brainstorming before building out the high fidelity mockup."
+      <CaseHero
+        eyebrow="Work / Case Study"
+        title="Website development; from mockup to launch"
+        badge="Web · Design + Dev"
+        lede="I led a full website redesign — from stakeholder interviews to deployment — before the 2024 Microsoft Ignite conference, resulting in a 40% increase in engagement with services and product pages."
+        spec={SPEC}
+      />
 
-    const figmaComponentLibraryText = 
-                    "I created a Figma component library to ensure that we maintain a consistent style between all pages for this project and for future projects our client may have. " +
-                    "The Figma component library acted as a central source of truth, enabling collaboration and faster iterations while maintaining design consistency."
-    
-    const highFidelityMockupText = 
-                    "I first built out the mobile view to ensure that all of our features could fit in a smaller screen size. " +
-                    "Once the mobile view was complete, I began to plan out the desktop view. " +
-                    "After completing the mockup, I demoed my design and user flow to upper management and the CEO to finalize the design process."
-    
-    const reactTemplateCodeText = 
-                    "After the high fidelity mockup was approved by upper management and the CEO, I began development of the website. " +
-                    "The code and content for the website were meticulously checked for bugs and spelling errors before finally getting sign off."
-    
-    return(
-        <div>
-            <CaseStudyHeader HeaderName={headerName} SummaryArray={summaryDetails}></CaseStudyHeader>
+      <CaseCover label="MAQ Software Website — hero shot" />
 
-            <div className="section-container-body white-background left-align">
-                <div className='section portfolio-padding'>
-                    <h2 className='section-header'>Summary</h2>
-                    <h2 className='section-sub-header'>Method of delivery and the results</h2>
-                    <div className='grid-container-3'>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Services</h2>
-                            <ul>
-                                <li>Hold stakeholder interviews</li>
-                                <li>Create sprint plan</li>
-                                <li>Perform competitive analysis</li>
-                                <li>Figma component library creation</li>
-                                <li>Figma mockup creation</li>
-                                <li>Lead ideation meetings</li>
-                                <li>Web development</li>
-                            </ul>
-
-                        </div>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Deliverables</h2>
-                            <ul>
-                                <li>Sprint plan</li>
-                                <li>Wireframes</li>
-                                <li>Figma component library</li>
-                                <li>High fidelity mockup</li>
-                                <li><a href='https://maqsoftware.com/' rel="noopener noreferrer" target='_blank'>Completed website</a></li>
-                            </ul>
-
-                        </div>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Outcomes</h2>
-                            <p>The website redesign focused on improving readability and clarity to ensure visitors easily understand the company's services and mission.</p>
-                            <p>By optimizing the layout, simplifying navigation, and enhancing content presentation, the updated site effectively communicates the company’s offerings, making it more user-friendly and accessible to potential clients.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div className="section-container-body gray-background left-align">
-                <div className='section portfolio-padding'>
-                    <h2 className='section-header'>Understanding the problem</h2>
-
-                    <div className='grid-container-1'>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Problem statement</h2>
-                            <p>
-                            The company's website currently struggles to effectively communicate its services and mission, leading to confusion and a lack of clarity for visitors.
-                             The layout, content organization, and navigation make it difficult for users to quickly understand the value the company provides, hindering engagement and potentially impacting business opportunities.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className='grid-container-2'>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>My task</h2>
-                            <p>
-                                Conduct meetings with the CEO and project leads to interpret their ideas and requests into actionable sprint items.
-                                 Create iteratable mockups to finalize all design decisions before conducting the website development phase.
-                                
-                            </p>
-                        </div>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Defining goals</h2>
-                            <ol>
-                                <li>Create sprint plan</li>
-                                <li>Define information architecture of home page</li>
-                                <li>Design new page components for Figma library</li>
-                                <li>Receive signoff for mockup from CEO and project leads</li>
-                                <li>Develop new webpage</li>
-                                <li>Ensure new website is bug free</li>
-                                <li>Publish website before Microsoft Ignite 2024 event</li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div className='grid-container-2'>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Meeting the deadline</h2>
-                            <p>
-                                To complete this project in a timely manner before our company attends the 2024 Microsoft Ignite conference, I held daily meetings with the CEO and project leads to better understand the vision and message of the new website.
-                                I then interpreted these requests into actionable sprint items and created a plan to complete website development before the provided deadline.
-                            </p>
-                        </div>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Research</h2>
-                            <p>
-                                I first deconstructed the website's information architecture to better understand the pitfalls of our current design.
-                                 From here, I began a competitive analysis of other consulting company websites to see how information for services could be presented in a more understandable manner.
-                                 I then combined our own original ideas with designs from our competitive analysis to create a website mockup that fit our requirements.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="section-container-body white-background left-align">
-                <div className='section portfolio-padding'>
-                    <h2 className='section-header'>The solution</h2>
-                    <div className='grid-container-2'>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Unifying our design</h2>
-                            <p> 
-                                The past website lacked design cohesion which made it difficult for users to intuitively read or navigate from page to page.
-                                In order to solve this problem, we redesigned the whole website using the Microsoft Fluent UI design system as a reference point while making our own tweaks along the way to make our own style.
-                            </p>
-
-                            <p>           
-                                By unifying our style, users were able to easily navigate the website which lead to an overall 40% increase in activity on our services and product pages.
-                            </p>
-                        </div>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Order matters</h2>
-                            <p>
-                                We used a third party app to identify which parts of the old website users clicked on the most and how long it took for them to view this information. We found that users were most interested in viewing our services and products, but were having to scroll further down the website to find this information which lead to users leaving the page out of frustration.
-                            </p>
-                            <p>
-                                To improve the user experience, we moved all information for the company services and products to the top of the home page. Each service and product was ordered based on popularity so users could easily find what they are looking for.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="section-container-body gray-background left-align">
-                <div className='section portfolio-padding'>
-                    <h2 className='section-header'>Deliverables</h2>
-                    <h2 className='section-sub-header'>(Some details are omitted due to a signed NDA.)</h2>
-                    <div className='grid-container-2 card-row-space'>
-                        <div className='grid-item grid-stretch'>
-                            <RowCard title={"Sprint plan"} imageUrl={WorkbackPlan} description={sprintPlan}></RowCard>
-                        </div>
-                        <div className='grid-item'>
-                            <RowCard title={"Wireframes"} imageUrl={Wireframe} description={wireframeText}></RowCard>
-                        </div>
-                    </div>
-                    <div className='grid-container-2 card-row-space'>
-                        <div className='grid-item'>
-                            <RowCard title={"Figma component library"} imageUrl={ComponentLibrary} description={figmaComponentLibraryText}></RowCard>
-                        </div>
-                        <div className='grid-item grid-stretch'>
-                            <RowCard title={"High fidelity mockup"} imageUrl={HighFidelityMockup} description={highFidelityMockupText}></RowCard>
-                        </div>
-                    </div>
-                    <div className='grid-container-2 card-row-space'>
-                        <div className='grid-item'>
-                            <RowCard title={"Completed website"} imageUrl={Website} description={reactTemplateCodeText}></RowCard>
-                        </div>
-                        <div className='grid-item'>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
+      <CaseBlock num={1} label="Overview">
+        <h3>The 30-second version</h3>
+        <p>One of my first major projects at MAQ Software was to revamp the company website before the 2024 Microsoft Ignite conference. The goal: make it easier for customers to understand our services and how they could benefit from working with us.</p>
+        <div className="cs-meta-grid">
+          <div className="cs-meta-col">
+            <h4>Services</h4>
+            <ul>
+              <li>Stakeholder interviews</li>
+              <li>Sprint planning</li>
+              <li>Competitive analysis</li>
+              <li>Figma component library</li>
+              <li>High-fidelity mockup</li>
+              <li>Ideation facilitation</li>
+              <li>Web development</li>
+            </ul>
+          </div>
+          <div className="cs-meta-col">
+            <h4>Deliverables</h4>
+            <ul>
+              <li>Sprint plan</li>
+              <li>Wireframes</li>
+              <li>Figma component library</li>
+              <li>High-fidelity mockup</li>
+              <li><a href="https://maqsoftware.com/" rel="noopener noreferrer" target="_blank">Completed website ↗</a></li>
+            </ul>
+          </div>
+          <div className="cs-meta-col">
+            <h4>Outcomes</h4>
+            <p>The redesign improved readability and clarity, making it easier for visitors to find and understand our services. By optimizing layout and navigation, the updated site drove a <strong>40% increase</strong> in activity on services and product pages.</p>
+          </div>
         </div>
-    );
+      </CaseBlock>
+
+      <CaseBlock num={2} label="Challenge">
+        <h3>The website struggled to communicate what we do.</h3>
+        <p>The company's existing website made it difficult for visitors to quickly understand our services and value proposition. The layout, content organization, and navigation were confusing — potentially impacting business opportunities before we could even start a conversation.</p>
+        <h4>My task</h4>
+        <p>Conduct meetings with the CEO and project leads to interpret their vision into actionable sprint items. Create iteratable mockups to finalize all design decisions before moving into development.</p>
+        <h4>Goals</h4>
+        <div className="cs-goals">
+          <div className="cs-goal"><p>Create a sprint plan with clear milestones</p></div>
+          <div className="cs-goal"><p>Define the information architecture of the home page</p></div>
+          <div className="cs-goal"><p>Design new page components and add them to the Figma library</p></div>
+          <div className="cs-goal"><p>Receive sign-off from the CEO and project leads on the mockup</p></div>
+          <div className="cs-goal"><p>Develop the new webpage</p></div>
+          <div className="cs-goal"><p>Ensure the new website is bug-free before launch</p></div>
+          <div className="cs-goal"><p>Publish before the Microsoft Ignite 2024 event</p></div>
+        </div>
+      </CaseBlock>
+
+      <CaseBlock num={3} label="Research">
+        <h3>Understanding what wasn't working</h3>
+        <p>I began by deconstructing the website's existing information architecture to identify where users were getting lost or losing interest. A third-party analytics tool revealed that users were most interested in our services and products — but had to scroll far down the page to find that information, leading to drop-off.</p>
+        <p>I then conducted a competitive analysis of other consulting company websites to see how similar organizations presented their services more clearly. The best examples combined concise, scannable service descriptions with strong visual hierarchy.</p>
+        <h4>Meeting the deadline</h4>
+        <p>To complete this in time for Ignite, I held daily meetings with the CEO and project leads to understand the vision and translate requests into a concrete sprint plan. Clear prioritization ensured the team knew what needed to ship versus what could come later.</p>
+      </CaseBlock>
+
+      <CaseBlock num={4} label="Solution">
+        <h3>Unifying design and fixing information hierarchy</h3>
+        <p>The previous website lacked design cohesion, making it difficult for users to navigate intuitively from page to page. We redesigned using Microsoft Fluent UI as a reference point — adapting it to create our own distinct visual style while maintaining a familiar, professional feel.</p>
+        <p>By establishing a consistent design system, users could navigate the site with confidence. This cohesion, combined with restructured information hierarchy, drove a <strong>40% increase in engagement</strong> on services and product pages.</p>
+        <h4>Order matters</h4>
+        <p>Analytics revealed users were most interested in our services and products but were abandoning the page before reaching that content. We moved all services and product information to the top of the home page, ordered by popularity — so users could immediately find what mattered most to them.</p>
+      </CaseBlock>
+
+      <CaseBlock num={5} label="Impact">
+        <h3>Measured after launch</h3>
+        <p>The redesigned website launched before Microsoft Ignite 2024 and delivered measurable improvements in engagement and discoverability.</p>
+        <CaseResults results={[
+          { n: '+40%', l: 'Increase in activity on services & product pages' },
+          { n: '↑', l: 'Improved discoverability of key service offerings through restructured navigation' },
+          { n: '✓', l: 'Launched on time before Microsoft Ignite 2024' },
+        ]} />
+      </CaseBlock>
+
+      <CaseBlock num={6} label="Deliverables">
+        <h3>What we shipped</h3>
+        <p className="case-note">Some details are omitted due to a signed NDA.</p>
+        <div className="cs-deliverables">
+          <div className="cs-del">
+            <div>
+              <h4>Sprint Plan</h4>
+              <p>An Impact Report for the CEO explaining the benefits of the redesign, estimated effort, and a week-by-week delivery plan that kept the project on schedule.</p>
+            </div>
+            <span className="cs-del-tag">Planning</span>
+          </div>
+          <div className="cs-del">
+            <div>
+              <h4>Wireframes</h4>
+              <p>Low-fidelity wireframes presenting the new information architecture and page structure to stakeholders before high-fidelity work began — enabling faster, lower-cost iteration.</p>
+            </div>
+            <span className="cs-del-tag">Design</span>
+          </div>
+          <div className="cs-del">
+            <div>
+              <h4>Figma Component Library</h4>
+              <p>A centralized library ensuring consistent style across all pages — a foundation for this project and a reusable asset for future website updates.</p>
+            </div>
+            <span className="cs-del-tag">Design System</span>
+          </div>
+          <div className="cs-del">
+            <div>
+              <h4>High-Fidelity Mockup</h4>
+              <p>Full mobile-first mockup expanded to desktop, then presented to the CEO for sign-off before development began. Multiple rounds of iteration ensured every detail was approved.</p>
+            </div>
+            <span className="cs-del-tag">Design</span>
+          </div>
+          <div className="cs-del">
+            <div>
+              <h4><a href="https://maqsoftware.com/" rel="noopener noreferrer" target="_blank">Completed Website ↗</a></h4>
+              <p>Fully developed, bug-tested, and launched before the Ignite 2024 deadline. Every page was reviewed for spelling, link accuracy, and content correctness before going live.</p>
+            </div>
+            <span className="cs-del-tag">Development</span>
+          </div>
+        </div>
+      </CaseBlock>
+    </div>
+  );
 }
 
 export default MAQWebsitePortfolio;

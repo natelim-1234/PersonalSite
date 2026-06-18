@@ -1,20 +1,27 @@
-import React from "react";
-import background from "../img/Nathan_Profile.jpg"
-import Portfolio from "./Portfolio.js"
-import DataManagementPortfolio from "./DataManagementPortfolio.js";
-import DataManagementIMG from "../img/Data_Management.svg";
-import Profile from "./Profile.js";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import HeroSection from './sections/HeroSection';
+import WorkSection from './sections/WorkSection';
+import ScrollReveal from './ui/ScrollReveal';
 
 function Home() {
-    return(
-        <div className="home-container">
-            <Profile/>
-            <div className='home-section-bg'>
-                <Portfolio imageSrc={DataManagementIMG}/>
-                {/* <CardSection/> */}
+  return (
+    <main id="top">
+      <HeroSection />
 
-            </div>
-        </div>
-    );
+      {/* Featured case studies */}
+      <section className="section wrap">
+        <ScrollReveal className="home-work-header">
+          <h2 className="home-work-title">Selected Work</h2>
+          <Link to="/work" className="home-work-link">
+            View all <span className="arrow">→</span>
+          </Link>
+        </ScrollReveal>
+        <WorkSection limit={3} />
+      </section>
+
+    </main>
+  );
 }
+
 export default Home;

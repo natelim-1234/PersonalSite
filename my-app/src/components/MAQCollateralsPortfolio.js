@@ -1,99 +1,99 @@
 import React from 'react';
-import { Worker, Viewer } from '@react-pdf-viewer/core';
-import '@react-pdf-viewer/core/lib/styles/index.css';
-import { pdfjs } from 'react-pdf';
-import {useParams} from 'react-router-dom';
-import CaseStudyHeader from './CaseStudyHeader';
-import RowCard from './RowCard';
-import DataManagementIMG from '../img/Data_Management.svg';
-import WorkbackPlan from '../img/Workback_Plan.svg';
-import Wireframe from '../img/Wireframe.svg';
-import ComponentLibrary from '../img/Component_Library.svg';
-import HighFidelityMockup from '../img/High_Fidelity_Mockup.svg';
-import CodeGeneration from '../img/Code_Generation.svg';
-import Website from '../img/Website.svg';
-import companyBrochure1 from '../img/MSIgnite24_Brochure-1.png'
-import companyBrochure2 from '../img/MSIgnite24_Brochure-2.png'
+import { ReadBar, CaseHero, CaseCover, CaseBlock } from './CaseStudyLayout';
+import ImageZoom from './ui/ImageZoom';
+import companyBrochure1 from '../img/MSIgnite24_Brochure-1.png';
+import companyBrochure2 from '../img/MSIgnite24_Brochure-2.png';
 
-function MAQCollateralsPortfolio(props) {
-    const summaryDetails= [
-        "Microsoft Ignite 2024 is an annual conference where various companies gather to see the latest innovations in Microsoft technology and to present their own services."
-        , "I was tasked with designing collaterals for our company booth such as handouts, informational webpages, video demoes, and booth backdrops that would attract new customers. "
-        // "Each item was thoughtfully designed to showcase our company in the most engaging and efficient way possible, ensuring the information is presented with both clarity and impact."
-    ]
+const SPEC = [
+  { k: 'Role',   v: 'Visual Designer' },
+  { k: 'Event',  v: 'Microsoft Ignite 2024' },
+  { k: 'Scope',  v: 'Brand & Print' },
+  { k: 'Output', v: '4 Deliverables' },
+];
 
-    const companyBrochure = '../img/MSIgnite24_Brochure.pdf'
-    
-    const headerName = "Designing impactful company collaterals"
+function MAQCollateralsPortfolio() {
+  return (
+    <div>
+      <ReadBar />
 
-    const sprintPlan = 
-                    "The sprint plan was compiled into an Impact Report which explained to the CEO the benefits of the website update and the estimated time required to complete the project. "
+      <CaseHero
+        eyebrow="Work / Case Study"
+        title="Designing impactful company collaterals"
+        badge="Brand · Visual Design"
+        lede="I designed the full suite of booth collaterals for Microsoft Ignite 2024 — from backdrop to brochure — to attract new customers and spark meaningful conversations at the event."
+        spec={SPEC}
+      />
 
-    const wireframeText = 
-                    "After performing my research, I drew out wireframes to present to stakeholders how the information architecture of the webpage will be represented. " +
-                    "The wireframe made it easier to communicate design ideas and brainstorming before building out the high fidelity mockup."
+      <CaseCover label="Microsoft Ignite 2024 — booth collaterals" />
 
-    const figmaComponentLibraryText = 
-                    "I created a Figma component library to ensure that we maintain a consistent style between all pages for this project and for future projects our client may have. " +
-                    "The Figma component library acted as a central source of truth, enabling collaboration and faster iterations while maintaining design consistency."
-    
-    const highFidelityMockupText = 
-                    "I first built out the mobile view to ensure that all of our features could fit in a smaller screen size. " +
-                    "Once the mobile view was complete, I began to plan out the desktop view. " +
-                    "After completing the mockup, I demoed my design and user flow to upper management and the CEO to finalize the design process."
-    
-    const reactTemplateCodeText = 
-                    "After the high fidelity mockup was approved by upper management and the CEO, I began development of the website. " +
-                    "The code and content for the website were meticulously checked for bugs and spelling errors before finally getting sign off."
-    
-    return(
-        <div>
-            <CaseStudyHeader HeaderName={headerName} SummaryArray={summaryDetails}></CaseStudyHeader>
-
-            <div className="section-container-body white-background left-align">
-                <div className='section portfolio-padding'>
-                    <h2 className='section-header'>Summary</h2>
-                    <h2 className='section-sub-header'>Method of delivery and the results</h2>
-                    <div className='grid-container-3'>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Services</h2>
-                            <ul>
-                                <li>Requirements gathering</li>
-                                <li>Competitive analysis</li>
-                                <li>Figma mockup creation</li>
-                                <li>Visual design</li>
-                                <li>Video editing</li>
-                            </ul>
-
-                        </div>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Deliverables</h2>
-                            <ul>
-                                <li>Company brochure</li>
-                                <li>Event information webpage</li>
-                                <li>Video demoes</li>
-                                <li>Booth backdrop</li>
-                            </ul>
-
-                        </div>
-                        <div className='grid-item'>
-                            <h2 className='grid-header'>Outcomes</h2>
-                            <p>The company collaterals created for the Microsoft Ignite 2024 were designed to captivate and engage through striking visuals and interesting topics for sparking meaningful conversations with customers.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div className="section-container-body gray-background left-align">
-                <div className='section portfolio-padding'>
-                    <h2 className='section-header'>Company brochure</h2>
-                    <object data="MSIgnite24_Brochure.pdf" height="1000"></object>
-                </div>
-            </div>
-            
-        
+      <CaseBlock num={1} label="Overview">
+        <h3>The 30-second version</h3>
+        <p>Microsoft Ignite 2024 is an annual conference where companies showcase the latest Microsoft technology innovations and present their own services. I was tasked with designing collaterals for our company booth — handouts, informational webpages, video demos, and booth backdrops — each thoughtfully crafted to attract new customers and communicate our brand clearly.</p>
+        <div className="cs-meta-grid">
+          <div className="cs-meta-col">
+            <h4>Services</h4>
+            <ul>
+              <li>Requirements gathering</li>
+              <li>Competitive analysis</li>
+              <li>Figma mockup creation</li>
+              <li>Visual design</li>
+              <li>Video editing</li>
+            </ul>
+          </div>
+          <div className="cs-meta-col">
+            <h4>Deliverables</h4>
+            <ul>
+              <li>Company brochure</li>
+              <li>Event information webpage</li>
+              <li>Video demos</li>
+              <li>Booth backdrop</li>
+            </ul>
+          </div>
+          <div className="cs-meta-col">
+            <h4>Outcomes</h4>
+            <p>The collaterals created for Microsoft Ignite 2024 were designed to captivate and engage through striking visuals and compelling content — sparking meaningful conversations with potential customers at the booth.</p>
+          </div>
         </div>
-    );
+      </CaseBlock>
+
+      <CaseBlock num={2} label="Company Brochure">
+        <h3>The main handout</h3>
+        <p>The company brochure was designed to give potential customers a clear, visually engaging overview of MAQ Software's services and products. It needed to be scannable and memorable — something attendees would hold onto after the conference.</p>
+        <div className="cs-img-pair">
+          <ImageZoom src={companyBrochure1} alt="Company brochure — page 1" />
+          <ImageZoom src={companyBrochure2} alt="Company brochure — page 2" />
+        </div>
+      </CaseBlock>
+
+      <CaseBlock num={3} label="Other Deliverables">
+        <h3>Full booth experience</h3>
+        <p>Beyond the brochure, I designed and produced three additional pieces to create a cohesive booth experience across every touchpoint:</p>
+        <div className="cs-deliverables">
+          <div className="cs-del">
+            <div>
+              <h4>Event Information Webpage</h4>
+              <p>A dedicated webpage for the Ignite event showcasing MAQ Software's booth details, session schedule, and key services — accessible to attendees before and during the conference.</p>
+            </div>
+            <span className="cs-del-tag">Web</span>
+          </div>
+          <div className="cs-del">
+            <div>
+              <h4>Video Demos</h4>
+              <p>Short, edited video demonstrations of key MAQ Software products and services — designed to play on screens at the booth and capture attention across a busy conference floor.</p>
+            </div>
+            <span className="cs-del-tag">Video</span>
+          </div>
+          <div className="cs-del">
+            <div>
+              <h4>Booth Backdrop</h4>
+              <p>A large-format backdrop designed to make the booth visually distinctive and clearly communicate our brand identity and core value proposition from across the room.</p>
+            </div>
+            <span className="cs-del-tag">Print</span>
+          </div>
+        </div>
+      </CaseBlock>
+    </div>
+  );
 }
 
 export default MAQCollateralsPortfolio;
