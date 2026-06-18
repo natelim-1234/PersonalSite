@@ -35,13 +35,12 @@ function HeroSection() {
           </h1>
 
           <ScrollReveal as="p" className="hero-role" delay={1}>
-            I'm a UX Designer &amp; Informatics Graduate.
+            UX Designer &amp; Informatics Graduate.
           </ScrollReveal>
 
           <ScrollReveal as="p" className="hero-bio" delay={2}>
-            I balance <strong>data, design, and people</strong> to build interfaces
-            that feel obvious — whether that's a mobile app, a company website, or
-            a complex data tool.
+            I bridge the gap between <strong>data, design, and people</strong> to build interfaces
+            that meet business goals without ever losing sight of the person on the other end of the screen.
           </ScrollReveal>
 
           <ScrollReveal delay={3}>
