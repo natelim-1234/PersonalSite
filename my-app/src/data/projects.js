@@ -2,6 +2,7 @@ import RecommenderImg  from '../img/session-recommender-images/session-recommend
 import MAQWebsiteImg   from '../img/MAQ_Website.png';
 import MAQIgniteImg    from '../img/MAQ_Ignite_Booth.png';
 import DataMgmtImg     from '../img/Data_Management.svg';
+import BuildDiscoverImg from '../img/Microsoft_Build_Discover.PNG';
 
 /**
  * Project data — add a new entry here to have it appear on the Work page.
@@ -14,6 +15,13 @@ import DataMgmtImg     from '../img/Data_Management.svg';
  *   img     — imported image/SVG for the card thumbnail
  */
 const PROJECTS = [
+  {
+    title: 'Microsoft Build Discover Page',
+    desc:  'Led the UX design of an AI assistant for Microsoft Build that helps tens of thousands of attendees discover relevant sessions and build a personalized conference schedule in minutes.',
+    tags:  ['Product Design', 'AI/UX', 'Enterprise'],
+    to:    '/microsoft-build-discover',
+    img:   BuildDiscoverImg,
+  },
   {
     title: 'Convention Schedule Recommender',
     desc:  'Led end-to-end design of a mobile app that helps attendees plan their conference schedule — cutting decision time and improving session satisfaction.',

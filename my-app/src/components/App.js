@@ -7,6 +7,7 @@ import Footer from './Footer.js';
 import Lecture from './Lecture.js';
 import StyleGuide from './StyleGuide.js';
 import EventRecommender from './EventRecommender.js';
+import MicrosoftBuildDiscover from './MicrosoftBuildDiscover.js';
 import DataServePortfolio from './DataManagementPortfolio.js';
 import MAQWebsitePortfolio from './MAQWebsitePortfolio.js';
 import MAQCollateralsPortfolio from './MAQCollateralsPortfolio.js';
@@ -27,6 +28,7 @@ function App() {
         <Route path="portfolio"                  element={<Navigate to="/home" replace />} />
         <Route path="lecture"                    element={<Lecture />} />
         <Route path="/event-recommender"         element={<EventRecommender />} />
+        <Route path="/microsoft-build-discover"  element={<MicrosoftBuildDiscover />} />
         <Route path="/data-serve-portfolio"      element={<DataServePortfolio />} />
         <Route path="/MAQ-website-portfolio"     element={<MAQWebsitePortfolio />} />
         <Route path="/MAQ-collaterals-portfolio" element={<MAQCollateralsPortfolio />} />
