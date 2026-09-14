@@ -48,7 +48,6 @@ function SkillsSection() {
               {col.items.map(skill => (
                 <li key={skill.name}>
                   {skill.name}
-                  <span className="lvl">{skill.level}</span>
                 </li>
               ))}
             </ul>

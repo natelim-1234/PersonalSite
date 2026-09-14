@@ -52,8 +52,7 @@ function Footer() {
       {/* Footer bar */}
       <div className="foot">
         <div className="foot-inner wrap">
-          <span>© {year} Nathan Limono — Designed &amp; built with care</span>
-          <span>UX designer based in Seattle</span>
+          <span>© {year} Nathan Limono</span>
         </div>
       </div>
     </footer>

@@ -15,9 +15,12 @@ function AboutSection() {
 
         <div className="about-body">
           <ScrollReveal>
+            <h1 className="hero-greeting">
+              <span className="ln"><span>Nathan Limono</span></span>
+            </h1>
             <p className="big">
               I graduated from the University of Washington with a BS in{' '}
-              <span>Informatics</span>, and now I'm a UX Designer at MAQ Software —
+              <span>Informatics</span>, and now I'm a UX Designer at MAQ Software
               working at the intersection of <span>data, design, and people</span>.
             </p>
           </ScrollReveal>
@@ -26,13 +29,6 @@ function AboutSection() {
               My work spans information architecture, interaction design, and visual design.
               I believe great products come from deeply understanding the people who use them,
               and from removing everything that doesn't earn its place.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={2}>
-            <p>
-              Each day I apply design expertise to craft clear information architectures and
-              intuitive products — whether that means leading a redesign that cuts clicks by 30%
-              or designing an app that helps hundreds of people plan their conference schedule.
             </p>
           </ScrollReveal>
           {/* <ScrollReveal delay={2} className="about-stats">
