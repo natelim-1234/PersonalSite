@@ -1,0 +1,22 @@
+:root {
+    --button-color--primary: var(--primary-color)
+
+}
+
+:where(button.primary) {
+    background: var(--button-color--primary);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 0px 16px;
+    box-shadow: 5px 5px 10px #762fcb33;
+    transition: scale 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.primary:hover {
+    background: linear-gradient(120deg,rgba(146, 73, 235, 1) 36%, rgba(173, 91, 235, 1) 61%, rgba(217, 135, 255, 1) 100%);
+    box-shadow: #591aa6;
+    scale: 0.99;
+}

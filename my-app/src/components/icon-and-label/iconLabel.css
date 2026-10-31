@@ -1,0 +1,15 @@
+.icon-label-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.icon {
+    display: flex;
+}
+
+.label-text {
+    margin-top: var(--spacing--008);
+    margin-bottom: var(--spacing--008);
+    font-family: var(--font-family--intro-text);
+    font-size: var(--font-size--020);
+}

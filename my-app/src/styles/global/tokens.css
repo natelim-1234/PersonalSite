@@ -1,0 +1,56 @@
+:root {
+  --font-family--roboto: 'Roboto', system-ui, 'Segoe UI', sans-serif;
+  --font-family--mono: "Space Mono", ui-monospace, monospace;
+
+  /* Color */
+  --primary-color: linear-gradient(120deg,rgba(108, 37, 195, 1) 25%, rgb(96, 44, 186) 55%, rgb(131, 89, 255) 100%);
+  --light-text-color: #FFFFFF;
+  --primary-background-color: linear-gradient(120deg,rgba(222, 222, 255, 1) 0%, rgba(241, 212, 255, 1) 91%);
+  --secondary-background-color: #101011;
+  /* Font Size */
+  --font-size--012: 0.75rem;
+  --font-size--014: 0.875rem;
+  --font-size--016: 1rem;
+  --font-size--018: 1.125rem;
+  --font-size--020: 1.25rem;
+  --font-size--024: 1.5rem;
+  --font-size--032: 2rem;
+  --font-size--040: 2.5rem;
+  --font-size--048: 3rem;
+  --font-size--056: 3.5rem;
+  --font-size--064: 4rem;
+
+  /* Font Weight */
+  --font-weight--light: 300;
+  --font-weight--regular: 400;
+  --font-weight--medium: 500;
+  --font-weight--semibold: 600;
+  --font-weight--bold: 700;
+  --font-weight--black: 900;
+
+  /* Line Height */
+  --line-height--tight: 1.1;
+  --line-height--snug: 1.18;
+  --line-height--default: 1.45;
+  --line-height--relaxed: 1.625;
+  --line-height--loose: 1.75;
+
+  /* Spacing */
+  --spacing--004: 0.25rem;
+  --spacing--008: 0.5rem;
+  --spacing--012: 0.75rem;
+  --spacing--016: 1rem;
+  --spacing--018: 1.125rem;
+  --spacing--024: 1.5rem;
+  --spacing--032: 2rem;
+  --spacing--040: 2.5rem;
+  --spacing--048: 3rem;
+  --spacing--056: 3.5rem;
+  --spacing--064: 4rem;
+  --spacing--080: 5rem;
+  --spacing--096: 6rem;
+  --spacing--128: 8rem;
+
+  /* Header Spacing */
+  --header-wrapper-spacing--072: 72px;
+}

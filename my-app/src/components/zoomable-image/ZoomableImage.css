@@ -1,0 +1,42 @@
+.zoomable-image {
+    cursor: zoom-in;
+}
+
+.zoomable-image-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(20px, 5vw, 80px);
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    cursor: zoom-out;
+}
+
+.zoomable-image-overlay-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.zoomable-image-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    margin: -24px 0 0 -24px;
+    border: 4px solid rgba(255, 255, 255, 0.25);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: zoomable-image-spin 0.8s linear infinite;
+}
+
+@keyframes zoomable-image-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

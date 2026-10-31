@@ -1,0 +1,77 @@
+:root{
+    /* hero sub-text */
+    --font-family--hero-subtext: var(--font-family--mono);
+    --font-size--hero-subtext: var(--font-size--024);
+    --margin-bottom--hero-subtext: var(--spacing--024);
+    --font-weight--hero-subtext: var(--font-weight--regular);
+    --font-color--hero-subtext: #3a3536;
+
+    /* intro text */
+    --font-family--intro-text: var(--font-family--roboto);
+    --font-size--intro-text: var(--font-size--024);
+    --line-height--intro-text: var(--line-height--relaxed);
+
+    /* body text */
+    --font-family--body-text: var(--font-family--roboto);
+    --font-size--body-text: var(--font-size--018);
+    --font-weight--body-text: var(--font-weight--regular);
+    --font-color--body-text: #252525;
+    --line-height--body-text: var(--line-height--relaxed);
+
+    /* button text */
+    --font-family--button-text: var(--font-family--roboto);
+    --font-size--button-text: var(--font-size--016);
+    --font-weight--button-text: var(--font-weight--semibold);
+    --font-color--button-text: #FFFFFF;
+
+    /* sub-header text */
+    --font-family--sub-header-text: var(--font-family--roboto);
+    --font-size--sub-header-text: var(--font-size--024);
+    --font-weight--sub-header-text: var(--font-weight--light);
+    --font-color--sub-header-text: #444444;
+
+
+}
+
+:where(p) {
+    margin: 0;
+}
+
+:where(p.sub-header-text) {
+    font-family: var(--font-family--sub-header-text);
+    font-size: var(--font-size--sub-header-text);
+    font-weight: var(--font-weight--sub-header-text);
+    color: var(--font-color--sub-header-text);
+}
+:where(p.hero-subtext) {
+    font-family: var(--font-family--hero-subtext);
+    font-size: var(--font-size--hero-subtext);
+    margin-bottom: var(--margin-bottom--hero-subtext);
+    font-weight: var(--font-weight--hero-subtext);
+    margin-top: 0;
+    color: var(--font-color--hero-subtext);
+}
+
+:where(p.intro-text) {
+    font-family: var(--font-family--intro-text);
+    font-size: var(--font-size--intro-text);
+    margin-bottom: var(--spacing--024);
+    line-height: var(--line-height--intro-text);
+}
+
+:where(.body-text) {
+    font-family: var(--font-family--body-text);
+    font-size: var(--font-size--body-text);
+    font-weight: var(--font-weight--body-text);
+    color: var(--font-color--body-text);
+    line-height: var(--line-height--body-text);
+    margin-bottom: var(--spacing--016);
+}
+
+:where(p.button-text) {
+    font-family: var(--font-family--button-text);
+    font-size: var(--font-size--button-text);
+    font-weight: var(--font-weight--button-text);
+    color: var(--font-color--button-text);
+    margin: 8px 0px;
+}

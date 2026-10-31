@@ -1,0 +1,44 @@
+:root {
+  /* meta label */
+  --font-family--case-study-meta-label: var(--font-family--mono);
+  --font-size--case-study-meta-label: var(--font-size--012);
+  --font-color--case-study-meta-label: var(--font-color--sub-header-text);
+
+  /* meta value */
+  --font-family--case-study-meta-value: var(--font-family--roboto);
+  --font-size--case-study-meta-value: var(--font-size--018);
+  --font-color--case-study-meta-value: var(--font-color--body-text);
+
+  --border-color--case-study-meta: rgba(37, 37, 37, 0.12);
+}
+
+.case-study-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing--032);
+  padding-block: var(--spacing--024);
+  margin-top: var(--spacing--032);
+  border-top: 1px solid var(--border-color--case-study-meta);
+  border-bottom: 1px solid var(--border-color--case-study-meta);
+}
+
+.case-study-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing--008);
+  flex: 1 1 160px;
+}
+
+.case-study-meta-label {
+  font-family: var(--font-family--case-study-meta-label);
+  font-size: var(--font-size--case-study-meta-label);
+  color: var(--font-color--case-study-meta-label);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.case-study-meta-value {
+  font-family: var(--font-family--case-study-meta-value);
+  font-size: var(--font-size--case-study-meta-value);
+  color: var(--font-color--case-study-meta-value);
+}

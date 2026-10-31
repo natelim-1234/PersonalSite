@@ -1,0 +1,82 @@
+.intro-container {
+    position: sticky;
+    top: 0;
+}
+
+
+.intro-pin-wrapper {
+  position: relative;
+  /* height is set in JS from the content's measured height + a fixed runway,
+     so it can never end up shorter than the content itself */
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        scale: 0.5;
+    }
+}
+
+.introduction {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  opacity: calc(1 - var(--fade, 0));
+  transform: scale(calc(1 - var(--fade, 0) * 0.05)); /* optional subtle shrink */
+}
+
+
+.page-padding-hero.animated {
+    animation: fade-out linear;
+    animation-timeline: scroll();
+}
+
+.email-button-container {
+    position: relative;
+    display: inline-block;
+}
+
+@keyframes tooltip-fade-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.email-copied-tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: #1a1a1a;
+    color: #ffffff;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    animation: tooltip-fade-in 0.15s ease-out;
+    pointer-events: none;
+}
+
+.email-copied-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #1a1a1a;
+}

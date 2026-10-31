@@ -1,0 +1,8 @@
+:root {
+    --background-color--body: #f5f3ff;
+}
+
+:where(body) {
+    background-color: var(--background-color--body);
+    margin: 0;
+}

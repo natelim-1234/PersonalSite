@@ -1,0 +1,44 @@
+:root {
+    --footer-link-color: var(--light-text-color);
+}
+
+:where(a) {
+    margin: 0;
+}
+
+:where(a.footer-link) {
+    color: var(--footer-link-color);
+    font-family: var(--font-family--roboto);
+    font-size: var(--font-size--018);
+    font-weight: var(--font-weight--light);
+    margin-bottom: var(--spacing--016);
+    text-decoration: none;
+    /* text-decoration-color: #9689aa;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px; */
+    position: relative;
+    transition: transform 0.3s ease-out;
+}
+
+a.footer-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: left;
+    height: 2px;
+    width: 100%;
+    transition: transform 0.3s ease-out;
+    background-color: #b07bff;
+    padding-left: 8px;
+}
+
+a.footer-link:hover {
+    color:#b07bff;
+    transform: translateX(4px);
+}
+
+a.footer-link:hover::after {
+  transform: translatex(-50%) scaleX(1);
+}

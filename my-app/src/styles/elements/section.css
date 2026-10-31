@@ -1,0 +1,23 @@
+:root {
+    --padding-left--section: clamp(20px, 5vw, 80px);
+    --padding-right--section: clamp(20px, 5vw, 80px);
+    --padding-top--section: clamp(20px, 5vw, 80px);
+    --padding-bottom--section: clamp(20px, 5vw, 80px);
+}
+
+:where(section) {
+    padding-top: var(--padding-top--section);
+    padding-bottom: var(--padding-bottom--section);
+}
+
+.section-inverse {
+    background-color: var(--secondary-background-color);
+    --font-color--h1: white;
+    --font-color--h2: white;
+    --font-color--body-text: white;
+    --font-color--sub-header-text: white;
+}
+
+:where(section.section-case-study-hero) {
+    background: var(--primary-background-color);
+}

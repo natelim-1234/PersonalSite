@@ -1,0 +1,64 @@
+:root {
+    /* hero text */
+    --font-family--hero: var(--font-family--roboto);
+    --font-size--hero: var(--font-size--064);
+    --margin-bottom--hero: var(--spacing--016);
+    --font-weight--hero: var(--font-weight--semibold);
+    --letter-spacing--hero: -0.1rem;
+
+    /* section header */
+    --font-family--section-header: var(--font-family--roboto);
+    --font-size--section-header: var(--font-size--048);
+    --margin-bottom--section-header: var(--spacing--008);
+    --font-weight--section-header: var(--font-weight--semibold);
+    --letter-spacing--section-header: -0.1rem;
+
+
+    /* h1 */
+    --font-family--h1: var(--font-family--roboto);
+    --font-size--h1:var(--font-size--032);
+    --font-color--h1: #121010;
+
+    /* h2 */
+    --font-family--h2: var(--font-family--roboto);
+    --font-size--h2:var(--font-size--024);
+    --font-color--h2: #121010;
+}
+
+:where(h1, h2, h3, h4){
+    margin: 0;
+    text-wrap: pretty;
+}
+
+.section-header {
+    font-family: var(--font-family--section-header);
+    font-size: var(--font-size--section-header);
+    margin-bottom: var(--margin-bottom--section-header);
+    font-weight: var(--font-weight--section-header);
+    letter-spacing: var(--letter-spacing--section-header);
+    margin-bottom: var(--spacing--032);
+}
+
+:where(h1) {
+    font-family: var(--font-family--h1);
+    font-size: var(--font-size--h1);
+    color: var(--font-color--h1);
+    margin-bottom: var(--spacing--016);
+}
+
+:where(h2) {
+    font-family: var(--font-family--h2);
+    font-size: var(--font-size--h2);
+    color: var(--font-color--h2);
+    margin-bottom: var(--spacing--016);
+}
+
+:where(h1.hero) {
+    font-family: var(--font-family--hero);
+    font-size: var(--font-size--hero);
+    margin-bottom: var(--margin-bottom--hero);
+    font-weight: var(--font-weight--hero);
+    letter-spacing: var(--letter-spacing--hero);
+}
+
+
